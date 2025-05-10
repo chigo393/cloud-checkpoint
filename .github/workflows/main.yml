@@ -1,0 +1,12 @@
+# .github/workflows/ci.yml
+name: Test on Self-Hosted Runner
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted  # 👈 tells GitHub to use your machine
+    steps:
+      - uses: actions/checkout@v2
+      - name: Say Hello
+        run: echo "Hello from my own runner!"
